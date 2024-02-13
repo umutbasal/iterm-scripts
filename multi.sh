@@ -62,3 +62,10 @@ EOF
 sk=$(echo "$script" | sed "s/\"host1\", \"host2\"/$hosts/" | sed "s/echo {hosts\[i\]}/$cmd/")
 
 echo "$sk" > ~/Library/Application\ Support/iTerm2/Scripts/multipane.py
+
+
+echo "Updated ~/Library/Application\ Support/iTerm2/Scripts/multipane.py"
+echo "hosts:"
+cat ~/Library/Application\ Support/iTerm2/Scripts/multipane.py | grep "hosts ="
+echo "cmd:"
+cat ~/Library/Application\ Support/iTerm2/Scripts/multipane.py | grep -E "send_text\(.*\)"
